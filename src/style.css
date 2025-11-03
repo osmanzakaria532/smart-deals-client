@@ -10,3 +10,15 @@
   --color-secondary: #9f62f2;
   --color-darkblack: 001931;
 }
+
+.linear-color {
+  @apply bg-linear-to-r from-[#632EE3] to-[#9F62F2];
+}
+
+.bg-linear {
+  @apply bg-linear-to-r from-[#FFE6FD] to-[#E0F8F5];
+}
+
+.menu li a.active {
+  @apply bg-linear-to-r from-[#632EE3] to-[#9F62F2] bg-clip-text text-transparent font-bold;
+}

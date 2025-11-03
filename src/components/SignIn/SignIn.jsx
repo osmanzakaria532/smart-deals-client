@@ -1,10 +1,10 @@
 /* eslint-disable no-unused-vars */
 import { use } from 'react';
 import { Link } from 'react-router';
-import { AuthCotext } from '../../contexts/AuthContext';
+import { AuthContext } from '../../contexts/AuthContext';
 
 const SignIn = () => {
-  const { signInWithGoogle } = use(AuthCotext);
+  const { signInWithGoogle } = use(AuthContext);
 
   const handleSignInWithGoogle = () => {};
   return (

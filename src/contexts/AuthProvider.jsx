@@ -8,7 +8,7 @@ import {
 } from 'firebase/auth';
 import { useEffect, useState } from 'react';
 import { auth } from '../firebase/firebase.config';
-import { AuthCotext } from './AuthContext';
+import { AuthContext } from './AuthContext';
 
 const googleProvider = new GoogleAuthProvider();
 
@@ -65,7 +65,7 @@ const AuthProvider = ({ children }) => {
   };
   return (
     <>
-      <AuthCotext value={authInfo}>{children}</AuthCotext>
+      <AuthContext value={authInfo}>{children}</AuthContext>
     </>
   );
 };

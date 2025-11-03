@@ -1,17 +1,17 @@
 import { use } from 'react';
 import { Link } from 'react-router';
 import { toast } from 'react-toastify';
-import { AuthCotext } from '../../contexts/AuthContext';
+import { AuthContext } from '../../contexts/AuthContext';
 
 const Register = () => {
-  const { signInWithGoogle } = use(AuthCotext);
+  const { signInWithGoogle } = use(AuthContext);
 
   const handleSignInWithGoogle = () => {
-    console.log('Google Signin');
+    // console.log('Google Signin');
     signInWithGoogle()
       .then((result) => {
         toast.success(`Sign In Successfully`);
-        console.log(result.user);
+        // console.log(result.user);
 
         const newUser = {
           name: result.user.displayName,
@@ -19,7 +19,7 @@ const Register = () => {
           image: result.user.photoURL,
         };
 
-        console.log(newUser);
+        // console.log(newUser);
 
         // create user in database
         fetch('http://localhost:5000/users/', {
